@@ -4,6 +4,7 @@ import chromadb
 from chromadb.utils import embedding_functions
 from pathlib import Path
 import os
+import time
 
 BASE_DIR = Path(__file__).parent
 CHROMA_PATH = str(BASE_DIR / "chroma_db")
@@ -70,9 +71,21 @@ def answer_question(user_query, collection, top_k=3):
         'sources': sources,
         'chunks': chunks,
         'context': context,
-        'prompt': prompt
+        'prompt': prompt,
+        'retrieved': results,
     }
- 
+
+def calculate_metrics(retrieved_results):
+     
+    found_sources = [meta['source'] for meta in retrieved_results['metadatas'][0]]
+    distances     = retrieved_results['distances'][0]
+
+    return {
+        'found_sources':  found_sources,
+        'top_similarity': round(1 - distances[0], 3),  # схожість топ-1
+        'num_chunks':     len(found_sources),
+    }
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -110,29 +123,31 @@ async def generate_answer(user_question: str, request: Request):
     """
     generate answer for base on download docs
     """
-
+    start_time = time.time()
     collection = request.app.state.collection
+    
     result = answer_question(user_question, collection, top_k = 3)
+    generated_answer = result['answer'] 
 
-    print(f"Questions: {user_question}")
- 
-    print("\nAnswer: ")
-    print(result['answer'])
+    end_time = time.time()
+    latency = end_time - start_time
     
-    print("\n" + "="*70)
-    print("Source: ")
-    for i, source in enumerate(result['sources'], 1):
-        print(f"{i}. {source['source']} (стор. {source['page']})")
+    metrics = calculate_metrics(result['retrieved'])
+     
+
+    print(f"Top similarity: {metrics['top_similarity']}")
+    print(f"Sources: {metrics['found_sources']}")
+
+
+    return({ 
+            'question': user_question,
+            'answer':   generated_answer,
+            'metrics':  metrics,
+            'latency':  round(latency, 3),
+        })
+
 
     
-    return {
-        "Questions": user_question,
-        "answer": result['answer'],
-        "sources":[
-            {"file": s['source'], "page": s['page']}
-        for s in result['sources']
-        ]
-    }
     
 if __name__ == "__main__":
     import uvicorn

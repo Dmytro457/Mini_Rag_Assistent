@@ -1,33 +1,56 @@
-## Start-up instructions
+## Mini rag assistent
 
-### 1. Clone the repository
+- модель, яка відповідає на запитання користувачів на основі завантажених PDF-файлів
+- виконує весь ланцюжок перетворень вхідних даних, перш ніж модель використовує їх для формування відповіді користувачеві
+
+#### Пайплайн використання
+
+1. Загрузить .pdf файли в папку 'downloaded_docs/' на основі яких модель буде давати відповідь
+2. Запустити файл 'Ingestion_pipeline.ipynb' для створення chroma_db
+3. Запустити 'FastAPI_endpoint.py' для ставлення питання до моделі (UI.py для інтерфейсу)
+
+## Інструкція запуску
+
+### 1. Клонуйте репозиторій
 
 ```bash
 git clone https://github.com/Dmytro457/Mini_Rag_Assistent.git
 cd Mini_Rag_Assistent
 ```
 
-### 2. Create and activate a virtual environment
+### 2. Створіть і активуйте віртуальне середовище
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 3. Install dependencies
+### 3. Завантажте залежності
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Install and set up Ollama
+### 4. Скачайте і налаштуйте Ollama
 
 Follow [Ollama installation instructions](https://github.com/ollama/ollama/blob/main/docs/linux.md) for your OS.
 
-#### Pull the chat model:
+#### Встановіть локальну модель для запитів (3гб.):
 
 ```bash
 ollama pull llama3.2
+```
+
+### 5. Створіть папку і завантажте туда .pdf
+
+```bash
+mkdir -p downloaded_docs
+```
+
+### 6. Побудуйде векторний індекс запустивши файл
+
+```bash
+python Ingestion_pipeline.py
 ```
 
 ## Usage
@@ -50,13 +73,18 @@ streamlit run UI.py
 
 **Example POST request:**
 
-```json
-{
-  "question": "Apa isi dokumen ini?"
-}
+```bash
+curl -X POST http://localhost:8000/generate_answer \
+  -H "Content-Type: application/json" \
+  -d '{"user_question": "What is SCIP?", "top_k": 3}'
 ```
 
-## Notes
+**Example POST response:**
 
-- Add new PDFs to the `pdfs` folder and restart the backend to include them.
-- Answers are based only on the content of the PDFs.
+```json
+{
+  "answer": "SCIP is an optimization framework...",
+  "sources": [{ "source": "pyscipopt-doc.pdf", "page": 10 }],
+  "latency": 2.34
+}
+```

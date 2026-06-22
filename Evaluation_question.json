@@ -22,11 +22,11 @@
   },
   {
     "id": 4,
-    "question": "What is GraphRAG?",
-    "expected_sources": ["Developers-Guide-GraphRAG.pdf"],
-    "expected_answer": "GraphRAG is a retrieval-augmented generation approach that uses knowledge graphs to enhance LLM responses.",
-    "expected_keywords": ["graph", "rag", "knowledge", "retrieval"]
-  },
+    "question": "Why is vectorization important in NLP pipelines, and what role do embeddings play in semantic search?",
+    "expected_sources": ["2025.unlp-1.18.pdf"],
+    "expected_answer": "Vectorization converts text into numerical representations (embeddings) that capture semantic meaning, enabling efficient similarity-based search in RAG systems.",
+    "expected_keywords": ["vectorization", "embeddings", "semantic", "search", "numerical"]
+},
   {
     "id": 5,
     "question": "What is the main advantage of DeepSeek-R1 over GPT-4o?",
@@ -50,11 +50,11 @@
   },
   {
     "id": 8,
-    "question": "What is the difference between Qwen2.5 and Llama variants?",
+    "question": "What are common preprocessing steps for text data before creating embeddings in a RAG system?",
     "expected_sources": ["2025.unlp-1.18.pdf"],
-    "expected_answer": "The 32B Qwen2.5-based model outperforms the 70B Llama-based variant by 6.69 percentage points in sentiment analysis.",
-    "expected_keywords": ["qwen2.5", "llama", "32b", "70b", "6.69"]
-  },
+    "expected_answer": "Common preprocessing steps include text cleaning, tokenization, chunking, and handling special characters to prepare data for embedding generation.",
+    "expected_keywords": ["preprocessing", "cleaning", "tokenization", "chunking", "embeddings"]
+},
   {
     "id": 9,
     "question": "What is the purpose of PySCIPOpt?",
@@ -71,11 +71,11 @@
   },
   {
     "id": 11,
-    "question": "How to use Matplotlib for visualization?",
-    "expected_sources": ["Matplotlib.pdf"],
-    "expected_answer": "Matplotlib provides functions like plot(), scatter(), and bar() for creating visualizations, with customization options for labels, colors, and styles.",
-    "expected_keywords": ["plot", "matplotlib", "visualization", "chart"]
-  },
+    "question": "Which open-source model demonstrates superior reasoning capabilities and step-by-step explainability compared to a commercial alternative in NLP tasks?",
+    "expected_sources": ["2025.unlp-1.18.pdf"],
+    "expected_answer": "DeepSeek-R1 is the open-source model that provides superior reasoning capabilities and step-by-step explainability, outperforming GPT-4o in few-shot efficiency and interpretability.",
+    "expected_keywords": ["DeepSeek-R1", "open-source", "reasoning", "explainability", "GPT-4o"]
+},
   {
     "id": 12,
     "question": "What is distillation in AI models?",
@@ -85,10 +85,10 @@
   },
   {
     "id": 13,
-    "question": "What is Pseudoflow in mining?",
-    "expected_sources": ["2020-11-Avalos-Pseudoflow.pdf"],
-    "expected_answer": "Pseudoflow is an optimization algorithm used for pit optimization in mining, implemented in Python.",
-    "expected_keywords": ["pseudoflow", "pit", "optimization", "mining"]
+    "question": "What are the key advantages of DeepSeek-R1 over GPT-4o in terms of performance on binary tasks and reasoning transparency?",
+  "expected_sources": ["2025.unlp-1.18.pdf"],
+  "expected_answer": "DeepSeek-R1 achieves 99.31% accuracy on binary tasks and offers superior explainability through transparent reasoning traces, outperforming GPT-4o in both efficiency and interpretability.",
+  "expected_keywords": ["99.31", "binary", "accuracy", "explainability", "transparent", "reasoning"]
   },
   {
     "id": 14,
@@ -120,11 +120,11 @@
   },
   {
     "id": 18,
-    "question": "What is the purpose of Mesa library?",
-    "expected_sources": ["mesa-readthedocs-io-en-stable.pdf"],
-    "expected_answer": "Mesa is an agent-based modeling framework in Python for building and analyzing simulation models.",
-    "expected_keywords": ["mesa", "agent-based", "modeling", "simulation"]
-  },
+    "question": "Which model is more efficient in few-shot learning, and which one provides better explainability?",
+    "expected_sources": ["2025.unlp-1.18.pdf"],
+    "expected_answer": "DeepSeek-R1 is eightfold more efficient in few-shot learning than GPT-4o, while also providing better explainability via step-by-step reasoning traces.",
+    "expected_keywords": ["eightfold", "efficiency", "explainability", "GPT-4o", "step-by-step"]
+},
   {
     "id": 19,
     "question": "What is the efficiency of DeepSeek-R1 in few-shot learning?",

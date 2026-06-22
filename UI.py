@@ -23,10 +23,7 @@ if st.button("Отримати відповідь") and user_question:
 
             st.subheader("Answer:")
             st.write(data['answer'])
-
-            st.subheader("Sources:")
-            for src in data["sources"]:
-                st.write(f" - '{src['file']}' - page {src['page']}")
+ 
         except Exception as e:
             st.error(f"Помилка: {e}")
   
