@@ -1,0 +1,24 @@
+# Бази даних та великі файли
+chroma_db/
+chroma_data/
+save_data/
+downloaded_docs/
+*.pdf
+*.sqlite3
+*.db
+
+# Python
+__pycache__/
+venv/
+env/
+.venv/
+*.pyc
+
+# IDE та системні файли
+.vscode/
+.idea/
+.DS_Store
+*.log
+
+# Секрети
+.env

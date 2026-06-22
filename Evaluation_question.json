@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "question": "What is the F1 score of DeepSeek-R1 on 5-class sentiment?",
+    "expected_sources": ["2503.11655v5.pdf"],
+    "expected_answer": "DeepSeek-R1 achieves 91.39% F1 score on 5-class sentiment analysis with just 5 shots.",
+    "expected_keywords": ["91.39", "F1", "sentiment"]
+  },
+  {
+    "id": 2,
+    "question": "What is the accuracy of DeepSeek-R1 on binary tasks?",
+    "expected_sources": ["2025.unlp-1.18.pdf"],
+    "expected_answer": "DeepSeek-R1 achieves 99.31% accuracy on binary sentiment tasks.",
+    "expected_keywords": ["99.31", "accuracy", "binary"]
+  },
+  {
+    "id": 3,
+    "question": "How to set parameters in SCIP?",
+    "expected_sources": ["pyscipopt-readthedocs-io-en-latest.pdf"],
+    "expected_answer": "In SCIP, parameters can be set using setRealParam(), setIntParam(), or setParams() functions.",
+    "expected_keywords": ["setRealParam", "setIntParam", "parameters"]
+  },
+  {
+    "id": 4,
+    "question": "What is GraphRAG?",
+    "expected_sources": ["Developers-Guide-GraphRAG.pdf"],
+    "expected_answer": "GraphRAG is a retrieval-augmented generation approach that uses knowledge graphs to enhance LLM responses.",
+    "expected_keywords": ["graph", "rag", "knowledge", "retrieval"]
+  },
+  {
+    "id": 5,
+    "question": "What is the main advantage of DeepSeek-R1 over GPT-4o?",
+    "expected_sources": ["2025.unlp-1.18.pdf"],
+    "expected_answer": "DeepSeek-R1 offers better few-shot efficiency (eightfold improvement) and superior explainability through transparent step-by-step reasoning traces.",
+    "expected_keywords": ["eightfold", "efficiency", "explainability", "reasoning"]
+  },
+  {
+    "id": 6,
+    "question": "What is the role of LLMs in sentiment analysis?",
+    "expected_sources": ["A-Neural-Network-Approach-to-Sentiment-Analysis.pdf"],
+    "expected_answer": "LLMs have significantly improved sentiment classification accuracy by providing better text understanding and reasoning capabilities.",
+    "expected_keywords": ["sentiment", "classification", "accuracy", "reasoning"]
+  },
+  {
+    "id": 7,
+    "question": "How to install Ollama?",
+    "expected_sources": ["llm-datasette-io-en-latest.pdf"],
+    "expected_answer": "Ollama can be installed by downloading the installer from ollama.com or using curl -fsSL https://ollama.com/install.sh | sh on Linux.",
+    "expected_keywords": ["install", "ollama", "download", "curl"]
+  },
+  {
+    "id": 8,
+    "question": "What is the difference between Qwen2.5 and Llama variants?",
+    "expected_sources": ["2025.unlp-1.18.pdf"],
+    "expected_answer": "The 32B Qwen2.5-based model outperforms the 70B Llama-based variant by 6.69 percentage points in sentiment analysis.",
+    "expected_keywords": ["qwen2.5", "llama", "32b", "70b", "6.69"]
+  },
+  {
+    "id": 9,
+    "question": "What is the purpose of PySCIPOpt?",
+    "expected_sources": ["pyscipopt-readthedocs-io-en-latest.pdf"],
+    "expected_answer": "PySCIPOpt is a Python interface for SCIP optimization framework, allowing users to formulate and solve optimization problems.",
+    "expected_keywords": ["scip", "optimization", "python", "interface"]
+  },
+  {
+    "id": 10,
+    "question": "What is the focus of the Ukrainian NLP Workshop?",
+    "expected_sources": ["2025.unlp-1.18.pdf"],
+    "expected_answer": "The UNLP workshop focuses on natural language processing advancements for the Ukrainian language, including sentiment analysis and LLM applications.",
+    "expected_keywords": ["ukrainian", "nlp", "workshop", "language"]
+  },
+  {
+    "id": 11,
+    "question": "How to use Matplotlib for visualization?",
+    "expected_sources": ["Matplotlib.pdf"],
+    "expected_answer": "Matplotlib provides functions like plot(), scatter(), and bar() for creating visualizations, with customization options for labels, colors, and styles.",
+    "expected_keywords": ["plot", "matplotlib", "visualization", "chart"]
+  },
+  {
+    "id": 12,
+    "question": "What is distillation in AI models?",
+    "expected_sources": ["2025.unlp-1.18.pdf"],
+    "expected_answer": "Distillation is a technique where smaller models (e.g., 32B Qwen2.5) are trained to mimic larger models (e.g., 70B Llama), creating more efficient variants.",
+    "expected_keywords": ["distillation", "smaller", "larger", "efficient"]
+  },
+  {
+    "id": 13,
+    "question": "What is Pseudoflow in mining?",
+    "expected_sources": ["2020-11-Avalos-Pseudoflow.pdf"],
+    "expected_answer": "Pseudoflow is an optimization algorithm used for pit optimization in mining, implemented in Python.",
+    "expected_keywords": ["pseudoflow", "pit", "optimization", "mining"]
+  },
+  {
+    "id": 14,
+    "question": "What is the DREAMS framework?",
+    "expected_sources": ["2409.17815v2.pdf"],
+    "expected_answer": "DREAMS is a Python framework for training deep learning models on EEG data with model card reporting for medical applications.",
+    "expected_keywords": ["dreams", "eeg", "deep learning", "medical"]
+  },
+  {
+    "id": 15,
+    "question": "What is MicroPython?",
+    "expected_sources": ["micropython-docs.pdf"],
+    "expected_answer": "MicroPython is a lean implementation of Python 3 optimized for microcontrollers and embedded systems.",
+    "expected_keywords": ["micropython", "embedded", "microcontroller"]
+  },
+  {
+    "id": 16,
+    "question": "How to run a model in Ollama?",
+    "expected_sources": ["llm-datasette-io-en-latest.pdf"],
+    "expected_answer": "To run a model in Ollama, use the command: ollama run <model-name> followed by your prompt.",
+    "expected_keywords": ["ollama", "run", "model", "command"]
+  },
+  {
+    "id": 17,
+    "question": "What is Tornado web framework?",
+    "expected_sources": ["www-tornadoweb-org-en-latest.pdf"],
+    "expected_answer": "Tornado is a Python web framework and asynchronous networking library, designed for handling long-lived connections.",
+    "expected_keywords": ["tornado", "asynchronous", "web", "framework"]
+  },
+  {
+    "id": 18,
+    "question": "What is the purpose of Mesa library?",
+    "expected_sources": ["mesa-readthedocs-io-en-stable.pdf"],
+    "expected_answer": "Mesa is an agent-based modeling framework in Python for building and analyzing simulation models.",
+    "expected_keywords": ["mesa", "agent-based", "modeling", "simulation"]
+  },
+  {
+    "id": 19,
+    "question": "What is the efficiency of DeepSeek-R1 in few-shot learning?",
+    "expected_sources": ["2025.unlp-1.18.pdf"],
+    "expected_answer": "DeepSeek-R1 shows an eightfold improvement in few-shot efficiency over GPT-4o, achieving high accuracy with just 5 shots.",
+    "expected_keywords": ["eightfold", "few-shot", "efficiency", "improvement"]
+  },
+  {
+    "id": 20,
+    "question": "How does explainability work in DeepSeek-R1?",
+    "expected_sources": ["2025.unlp-1.18.pdf"],
+    "expected_answer": "DeepSeek-R1 provides explainability via transparent, step-by-step reasoning traces, making it more interpretable than black-box models.",
+    "expected_keywords": ["explainability", "step-by-step", "traces", "transparent"]
+  }
+] 
