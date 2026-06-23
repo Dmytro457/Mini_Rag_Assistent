@@ -9,6 +9,4 @@ tqdm
 numpy
 pydantic
 requests 
-pathlib
-json
-time
+pathlib 
