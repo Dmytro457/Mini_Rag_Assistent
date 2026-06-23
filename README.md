@@ -53,25 +53,27 @@ mkdir -p downloaded_docs
 python Ingestion_pipeline.py
 ```
 
-## Usage
+## Використання
 
-### 1. Start the FastAPI backend
+### 1. ЗАпустити FastAPI backend
 
 ```bash
 uvicorn FastAPI_endpoint:app --reload
 ```
 
-### 2. Start the Streamlit frontend (in a new terminal)
+### 2. Запустити Streamlit frontend (в новому терміналі)
 
 ```bash
 streamlit run UI.py
 ```
 
-### 3. Ask questions
+### 3. Написати запит
 
 - Use the Streamlit UI in your browser (`http://localhost:8501`)
 
-**Example POST request:**
+**Приклад POST запитання:**
+
+В linux, mac
 
 ```bash
 curl -X POST http://localhost:8000/generate_answer \
@@ -79,7 +81,27 @@ curl -X POST http://localhost:8000/generate_answer \
   -d '{"user_question": "What is SCIP?", "top_k": 3}'
 ```
 
-**Example POST response:**
+В windows
+
+```bash
+Invoke-WebRequest -Uri "http://localhost:8000/generate_answer" `
+  -Method POST `
+  -ContentType "application/json" `
+  -Body '{"user_question": "What is SCIP?", "top_k": 3}'
+```
+
+Код в python
+
+```bash
+import requests
+response = requests.post(
+    "http://localhost:8000/generate_answer",
+    json={"user_question": "What is SCIP?", "top_k": 3}
+)
+print(response.json())
+```
+
+**Приклад POST відповіді:**
 
 ```json
 {
