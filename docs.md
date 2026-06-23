@@ -1,13 +1,13 @@
 ## Що роблять всі файли
 
-### Ingestion.ipynb
+### Ingestion_pipeline.ipynb
 
 - Підтягує документи з папки downloaded_docs/
 - розділяє на чанки
 - зберігає метадані для чанків
 - побудувати векторний індекс в ChromaDB
 
-### Retrieval.ipynb
+### Retrieval_step.ipynb
 
 - Використовує similarity пошук
 - і використовує покращену стратегію пошуку гібридний пошук
